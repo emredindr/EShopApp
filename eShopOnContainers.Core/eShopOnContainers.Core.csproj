@@ -23,6 +23,7 @@
     <Folder Include="Models\Permissions\" />
     <Folder Include="Fonts\">
     </Folder>
+    <Folder Include="MyViews\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Fonts\" />
