@@ -14,5 +14,4 @@ namespace eShopOnContainers.Core.Services.MyCategory
         List<SubCategory> GetBabyPopulerCategories();
     }
 }
-}
-}
+
