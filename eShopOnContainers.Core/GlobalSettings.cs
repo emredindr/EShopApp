@@ -6,7 +6,7 @@ namespace eShopOnContainers.Core
     {
         public const string AzureTag = "Azure";
         public const string MockTag = "Mock";
-        public const string DefaultEndpoint = "http://172.25.32.1"; // i.e.: "http://YOUR_IP" or "http://YOUR_DNS_NAME"
+        public const string DefaultEndpoint = "http://192.168.236.55/"; // i.e.: "http://YOUR_IP" or "http://YOUR_DNS_NAME"
 
         private string _baseIdentityEndpoint;
         private string _baseGatewayShoppingEndpoint;
