@@ -4,11 +4,11 @@ using eShopOnContainers.Core.Services.MyRestService;
 
 namespace eShopOnContainers.Core.Services.MyAccount
 {
-    public class AccountManager : IAccountManager
+    public class AccountService : IAccountService
     {
         private readonly RestServiceManager<List<AccountPageItem>> _restServiceAccountPageItemManager;
         private readonly RestServiceManager<List<AccountPageItemLogined>> _restServiceAccountPageItemLoginedManager;
-        public AccountManager()
+        public AccountService()
         {
             _restServiceAccountPageItemLoginedManager = new RestServiceManager<List<AccountPageItemLogined>>();
             _restServiceAccountPageItemManager = new RestServiceManager<List<AccountPageItem>>();

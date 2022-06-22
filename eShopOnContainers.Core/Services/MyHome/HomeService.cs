@@ -4,10 +4,10 @@ using eShopOnContainers.Core.Services.MyRestService;
 
 namespace eShopOnContainers.Core.Services.MyHome
 {
-    public class HomeManager : IHomeManager
+    public class HomeService : IHomeService
     {
         private readonly RestServiceManager<List<Banner>> _restServiceBannerManager;
-        public HomeManager()
+        public HomeService()
         {
             _restServiceBannerManager = new RestServiceManager<List<Banner>>();
         }

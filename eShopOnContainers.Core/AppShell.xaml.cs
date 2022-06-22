@@ -11,24 +11,24 @@ namespace eShopOnContainers.Core
     {
         public AppShell ()
         {
-            InitializeRouting ();
-            InitializeComponent ();
+            //InitializeRouting ();
+            //InitializeComponent ();
 
-            var settingsService = ViewModelLocator.Resolve<ISettingsService> ();
+            //var settingsService = ViewModelLocator.Resolve<ISettingsService> ();
 
-            if (string.IsNullOrEmpty (settingsService.AuthAccessToken))
-            {
-                this.GoToAsync ("//Login");
-            }
+            //if (string.IsNullOrEmpty (settingsService.AuthAccessToken))
+            //{
+            //    this.GoToAsync ("//Login");
+            //}
         }
 
         private void InitializeRouting()
         {
-            Routing.RegisterRoute ("Basket", typeof (BasketView));
-            Routing.RegisterRoute ("Settings", typeof (SettingsView));
-            Routing.RegisterRoute ("OrderDetail", typeof (OrderDetailView));
-            Routing.RegisterRoute ("CampaignDetails", typeof(CampaignDetailsView));
-            Routing.RegisterRoute ("Checkout", typeof (CheckoutView));
+        //    Routing.RegisterRoute ("Basket", typeof (BasketView));
+        //    Routing.RegisterRoute ("Settings", typeof (SettingsView));
+        //    Routing.RegisterRoute ("OrderDetail", typeof (OrderDetailView));
+        //    Routing.RegisterRoute ("CampaignDetails", typeof(CampaignDetailsView));
+        //    Routing.RegisterRoute ("Checkout", typeof (CheckoutView));
         }
 
 

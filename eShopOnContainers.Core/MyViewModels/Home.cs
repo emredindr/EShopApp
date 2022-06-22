@@ -8,7 +8,7 @@ namespace eShopOnContainers.Core.MyViewModels
     {
         public List<Banner> Banners { get; set; }
 
-        public Home(IHomeManager homeManager)
+        public Home(IHomeService homeManager)
         {
             Banners = homeManager.GetBanners();
         }

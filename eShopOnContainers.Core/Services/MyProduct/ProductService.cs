@@ -5,10 +5,10 @@ using eShopOnContainers.Core.Services.MyRestService;
 
 namespace eShopOnContainers.Core.Services.MyProduct
 {
-    public class ProductManager : IProductManager
+    public class ProductService : IProductServices
     {
         private readonly RestServiceManager<List<Product>> _restServiceProductManager;
-        public ProductManager()
+        public ProductService()
         {
             _restServiceProductManager = new RestServiceManager<List<Product>>();
         }

@@ -3,7 +3,7 @@ using eShopOnContainers.Core.Models.MyHome;
 
 namespace eShopOnContainers.Core.Services.MyHome
 {
-    public interface IHomeManager
+    public interface IHomeService
     {
         List<Banner> GetBanners();
     }

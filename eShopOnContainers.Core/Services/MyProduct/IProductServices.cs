@@ -3,7 +3,7 @@ using eShopOnContainers.Core.Models.MyProduct;
 
 namespace eShopOnContainers.Core.Services.MyProduct
 {
-    public interface IProductManager
+    public interface IProductServices
     {
         List<Product> GetProducts();
         List<Product> GetProducts(ProductFilter productFilter);

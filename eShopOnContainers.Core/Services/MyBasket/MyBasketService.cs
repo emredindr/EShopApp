@@ -7,11 +7,11 @@ using Newtonsoft.Json;
 
 namespace eShopOnContainers.Core.Services.MyBasket
 {
-    public class MyBasketManager
+    public class MyBasketService
     {
         private readonly RestServiceManager<List<MyBasketItem>> _restServiceMyBasketItemManager;
 
-        public MyBasketManager()
+        public MyBasketService()
         {
             _restServiceMyBasketItemManager = new RestServiceManager<List<MyBasketItem>>();
         }
@@ -38,8 +38,6 @@ namespace eShopOnContainers.Core.Services.MyBasket
                 string data = JsonConvert.SerializeObject(id);
                 webClient.UploadString(ServiceUrlConst.DeleteItem, data);
                 return true;
-
-                //$"{ServiceUrlConst.DeleteItem}/{id}"
             }
         }
         public bool DeleteAll()

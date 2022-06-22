@@ -10,12 +10,12 @@ namespace eShopOnContainers.Core.MyViews.HomeTabbedPageViews
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyBasketPage : ContentPage
     {
-        readonly  MyBasketManager _myBasketManager;
+        readonly  MyBasketService _myBasketManager;
         public MyBasketPage()
         {
 
             InitializeComponent();
-            _myBasketManager = new MyBasketManager();
+            _myBasketManager = new MyBasketService();
             var allProductCount = _myBasketManager.GetAllCount();
 
 

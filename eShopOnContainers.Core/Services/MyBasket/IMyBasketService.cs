@@ -3,7 +3,7 @@ using eShopOnContainers.Core.Models.MyBasket;
 
 namespace eShopOnContainers.Core.Services.MyBasket
 {
-    public interface IMyBasketManager
+    public interface IMyBasketService
     {
         MyBasketItem Get(int Id);
         int GetAllCount();

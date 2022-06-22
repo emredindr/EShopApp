@@ -9,13 +9,13 @@ namespace eShopOnContainers.Core.MyViews.HomeTabbedPageViews.CategoryDetailPageV
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProductDetailPage : ContentPage
     {
-        readonly MyBasketManager _sQLiteMyBasketManager;
+        readonly MyBasketService _sQLiteMyBasketManager;
         public Product ProductItem { get; set; }
 
         public ProductDetailPage(Product _product)
         {
             InitializeComponent();
-            _sQLiteMyBasketManager = new MyBasketManager();
+            _sQLiteMyBasketManager = new MyBasketService();
             ProductItem = _product;
             BindingContext = _product;
 

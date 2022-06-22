@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace eShopOnContainers
 {
-    public partial class App : Application
+    public partial class App : IApplicationController
     {
         ISettingsService _settingsService;
 

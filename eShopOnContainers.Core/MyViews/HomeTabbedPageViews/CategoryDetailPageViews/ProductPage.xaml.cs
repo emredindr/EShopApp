@@ -12,12 +12,12 @@ namespace eShopOnContainers.Core.MyViews.HomeTabbedPageViews.CategoryDetailPageV
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProductPage : ContentPage
     {
-        readonly MyBasketManager _myBasketManager;
+        readonly MyBasketService _myBasketManager;
         public ProductPage(ProductFilter productFilter)
         {
             InitializeComponent();
-            var productManager = Startup.ServiceProvider.GetService<IProductManager>();
-            _myBasketManager = new MyBasketManager();
+            var productManager = Startup.ServiceProvider.GetService<IProductServices>();
+            _myBasketManager = new MyBasketService();
             lblProductCategoryName.Text = productFilter.Title;
             var productsWithImage = productManager.GetProducts(productFilter);
             productFlowList.FlowItemsSource = productsWithImage;

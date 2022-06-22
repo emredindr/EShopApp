@@ -5,7 +5,7 @@
     xmlns:views="clr-namespace:eShopOnContainers.Core.Views"
     x:Class="eShopOnContainers.Core.AppShell">
 
-    <Shell.Resources>
+    <!--<Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkBackgroundColor}, Light={StaticResource LightBackgroundColor}}" />
@@ -33,5 +33,5 @@
     <TabBar Route="Main">
         <ShellContent Title="CATALOG" Route="Catalog" Icon="{StaticResource CatalogIconImageSource}" ContentTemplate="{DataTemplate views:CatalogView}" />
         <ShellContent Title="PROFILE" Route="Profile" Icon="{StaticResource ProfileIconImageSource}" ContentTemplate="{DataTemplate views:ProfileView}" />
-    </TabBar>
+    </TabBar>-->
 </Shell>

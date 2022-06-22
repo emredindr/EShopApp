@@ -9,7 +9,7 @@ namespace eShopOnContainers.Core.MyViewModels
         public List<MainCategory> MainCategories { get; set; }
         public List<SubCategory> BabyPopulerCategories { get; set; }
         public List<SubCategory> ElektronicPopulerCategories { get; set; }
-        public Category(ICategoryManager categoryManager)
+        public Category(ICategoryService categoryManager)
         {
             MainCategories = categoryManager.GetMainCategories();
             ElektronicPopulerCategories = categoryManager.GetElektronicPopulerCategories();

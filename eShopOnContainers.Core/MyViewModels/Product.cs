@@ -6,7 +6,7 @@ namespace eShopOnContainers.Core.MyViewModels
     public class Product
     {
         public List<Models.MyProduct.Product> Products { get; set; }
-        public Product(IProductManager productManager)
+        public Product(IProductServices productManager)
         {
             Products = productManager.GetProducts();
         }

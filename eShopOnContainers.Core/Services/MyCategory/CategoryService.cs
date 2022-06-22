@@ -5,13 +5,13 @@ using eShopOnContainers.Core.Services.MyRestService;
 
 namespace eShopOnContainers.Core.Services.MyCategory
 {
-    public class CategoryManager : ICategoryManager
+    public class CategoryService : ICategoryService
     {
         private readonly RestServiceManager<List<MainCategory>> _restServiceMainCategoryManager;
         private readonly RestServiceManager<List<SubCategory>> _restServiceSubCategoryManager;
         private readonly RestServiceManager<List<SubOfSubCategory>> _restServiceSubOfSubCategoryManager;
 
-        public CategoryManager()
+        public CategoryService()
         {
             _restServiceMainCategoryManager = new RestServiceManager<List<MainCategory>>();
             _restServiceSubCategoryManager = new RestServiceManager<List<SubCategory>>();

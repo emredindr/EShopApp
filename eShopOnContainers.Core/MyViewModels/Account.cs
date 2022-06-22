@@ -8,7 +8,7 @@ namespace eShopOnContainers.Core.MyViewModels
     {
         public List<AccountPageItem> AllAccountPageItems { get; set; }
         public List<AccountPageItemLogined> AllAccountPageItemsLogined { get; set; }
-        public Account(IAccountManager accountManager)
+        public Account(IAccountService accountManager)
         {
             AllAccountPageItems = accountManager.GetAccountPageItems();
             AllAccountPageItemsLogined = accountManager.GetAccountPageItemsLogined();

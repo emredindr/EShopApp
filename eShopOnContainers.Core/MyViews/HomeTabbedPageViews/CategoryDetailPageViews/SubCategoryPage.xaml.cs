@@ -17,7 +17,7 @@ namespace eShopOnContainers.Core.MyViews.HomeTabbedPageViews.CategoryDetailPageV
         public SubCategoryPage(MainCategory mainCategory)
         {
             InitializeComponent();
-            var categoryManager = Startup.ServiceProvider.GetService<ICategoryManager>();
+            var categoryManager = Startup.ServiceProvider.GetService<ICategoryService>();
             categoryListView.ItemsSource = categoryManager.GetSubCategories(mainCategory);
             lblName.Text = mainCategory.Title;
             SelectedMainCategoryId = mainCategory.Id;

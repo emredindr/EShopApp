@@ -3,7 +3,7 @@ using eShopOnContainers.Core.Models.MyCategory;
 
 namespace eShopOnContainers.Core.Services.MyCategory
 {
-    public interface ICategoryManager
+    public interface ICategoryService
     {
         List<MainCategory> GetMainCategories();
         List<SubCategory> GetSubCategories();

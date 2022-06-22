@@ -11,10 +11,10 @@ namespace eShopOnContainers.Core.Services.Dependency
     {
         public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
-            services.AddScoped<IAccountManager, AccountManager>();
-            services.AddScoped<IHomeManager, HomeManager>();
-            services.AddScoped<ICategoryManager, CategoryManager>();
-            services.AddScoped<IProductManager, ProductManager>();
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IHomeService, HomeService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductServices, ProductService>();
 
             return services;
         }
