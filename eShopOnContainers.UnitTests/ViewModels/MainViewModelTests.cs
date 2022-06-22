@@ -10,32 +10,32 @@ namespace eShopOnContainers.UnitTests
 {
     public class MainViewModelTests
     {
-        public MainViewModelTests()
-        {
-            ViewModelLocator.UpdateDependencies(true);
-            Xamarin.Forms.DependencyService.RegisterSingleton<ISettingsService>(new MockSettingsService());
-        }
+        //public MainViewModelTests()
+        //{
+        //    ViewModelLocator.UpdateDependencies(true);
+        //    Xamarin.Forms.DependencyService.RegisterSingleton<ISettingsService>(new MockSettingsService());
+        //}
 
-        [Fact]
-        public void SettingsCommandIsNotNullWhenViewModelInstantiatedTest()
-        {
-            var mainViewModel = new MainViewModel();
-            Assert.NotNull(mainViewModel.SettingsCommand);
-        }
+        //[Fact]
+        //public void SettingsCommandIsNotNullWhenViewModelInstantiatedTest()
+        //{
+        //    var mainViewModel = new MainViewModel();
+        //    Assert.NotNull(mainViewModel.SettingsCommand);
+        //}
 
-        [Fact]
-        public void IsBusyPropertyIsFalseWhenViewModelInstantiatedTest()
-        {
-            var mainViewModel = new MainViewModel();
-            Assert.False(mainViewModel.IsBusy);
-        }
+        //[Fact]
+        //public void IsBusyPropertyIsFalseWhenViewModelInstantiatedTest()
+        //{
+        //    var mainViewModel = new MainViewModel();
+        //    Assert.False(mainViewModel.IsBusy);
+        //}
 
-        [Fact]
-        public async Task IsBusyPropertyIsTrueAfterViewModelInitializationTest()
-        {
-            var mainViewModel = new MainViewModel();
-            await mainViewModel.InitializeAsync(null);
-            Assert.True(mainViewModel.IsBusy);
-        }
+        //[Fact]
+        //public async Task IsBusyPropertyIsTrueAfterViewModelInitializationTest()
+        //{
+        //    var mainViewModel = new MainViewModel();
+        //    await mainViewModel.InitializeAsync(null);
+        //    Assert.True(mainViewModel.IsBusy);
+        //}
     }
 }
