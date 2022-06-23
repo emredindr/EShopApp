@@ -16,7 +16,7 @@ namespace eShopOnContainers.Core.MyViews.HomeTabbedPageViews.CategoryDetailPageV
         public ProductPage(ProductFilter productFilter)
         {
             InitializeComponent();
-            var productManager = Startup.ServiceProvider.GetService<IProductServices>();
+            var productManager = Startup.ServiceProvider.GetService<IProductService>();
             _myBasketManager = new MyBasketService();
             lblProductCategoryName.Text = productFilter.Title;
             var productsWithImage = productManager.GetProducts(productFilter);
@@ -73,7 +73,6 @@ namespace eShopOnContainers.Core.MyViews.HomeTabbedPageViews.CategoryDetailPageV
             var selectedProduct = (Product)item.CommandParameter;
             if (selectedProduct != null && selectedProduct.Id > 0)
             {
-                //ProductDetailPage(selectedProduct) olarak düzenlenecek
                 Page page = new ProductDetailPage(selectedProduct);
                 Navigation.PushAsync(page);
             }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace eShopOnContainers.Core
 {
-    public class ServiceUrlConst
+    public class MyGlobalSettings
     {
         //Category
         public static string MainCategory = "http://192.168.43.183:84/api/Category/GetAllMainCategories";

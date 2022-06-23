@@ -31,7 +31,7 @@
                 <DataTemplate >
                     <ViewCell>
                         <StackLayout Orientation="Horizontal"  VerticalOptions="End"  Padding="15">
-                            <Image  Source="{Binding IconSource}" ></Image>
+                            <Image  Source="{Binding ProductIconSource}" ></Image>
                             <StackLayout Orientation="Vertical">
                                 <Label TextColor="Black" FontSize="Micro" Text="{Binding Title}"></Label>
                                 <Label TextColor="Black" FontSize="Small" Text="{Binding Price}"></Label>

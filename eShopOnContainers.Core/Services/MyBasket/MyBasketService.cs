@@ -9,11 +9,11 @@ namespace eShopOnContainers.Core.Services.MyBasket
 {
     public class MyBasketService
     {
-        private readonly RestServiceManager<List<MyBasketItem>> _restServiceMyBasketItemManager;
+        private readonly RequestProvider<List<MyBasketItem>> _restServiceMyBasketItemManager;
 
         public MyBasketService()
         {
-            _restServiceMyBasketItemManager = new RestServiceManager<List<MyBasketItem>>();
+            _restServiceMyBasketItemManager = new RequestProvider<List<MyBasketItem>>();
         }
 
 
@@ -24,7 +24,7 @@ namespace eShopOnContainers.Core.Services.MyBasket
             {
                 webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
                 string data = JsonConvert.SerializeObject(s);
-                var response = webClient.UploadString(ServiceUrlConst.AddMyBasket, data);
+                var response = webClient.UploadString(MyGlobalSettings.AddMyBasket, data);
                 var result = JsonConvert.DeserializeObject<int>(response);
                 return result;
             }
@@ -36,7 +36,7 @@ namespace eShopOnContainers.Core.Services.MyBasket
             {
                 webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
                 string data = JsonConvert.SerializeObject(id);
-                webClient.UploadString(ServiceUrlConst.DeleteItem, data);
+                webClient.UploadString(MyGlobalSettings.DeleteItem, data);
                 return true;
             }
         }
@@ -45,24 +45,24 @@ namespace eShopOnContainers.Core.Services.MyBasket
             using (WebClient webClient = new WebClient())
             {
                 webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
-                webClient.UploadString(ServiceUrlConst.DeleteAll, string.Empty);
+                webClient.UploadString(MyGlobalSettings.DeleteAll, string.Empty);
                 return true;
             }
         }
 
         public IEnumerable<MyBasketItem> GetAll()
         {
-            return _restServiceMyBasketItemManager.GetServiceResponse(ServiceUrlConst.GetAllBasketItem);
+            return _restServiceMyBasketItemManager.GetServiceResponse(MyGlobalSettings.GetAllBasketItem);
         }
 
         public int GetAllCount()
         {
-            return _restServiceMyBasketItemManager.GetServiceResponse(ServiceUrlConst.GetAllBasketItem).Count;
+            return _restServiceMyBasketItemManager.GetServiceResponse(MyGlobalSettings.GetAllBasketItem).Count;
         }
 
         public MyBasketItem Get(int Id)
         {
-            var data = _restServiceMyBasketItemManager.GetServiceResponse(ServiceUrlConst.GetAllBasketItem);
+            var data = _restServiceMyBasketItemManager.GetServiceResponse(MyGlobalSettings.GetAllBasketItem);
             return data.Where(x => x.Id == Id).FirstOrDefault();
         }
 

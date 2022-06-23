@@ -6,11 +6,11 @@ using System.Text.Json;
 
 namespace eShopOnContainers.Core.Services.MyRestService
 {
-    public class RestServiceManager<T> where T : class
+    public class RequestProvider<T> where T : class
     {
         private readonly JsonSerializerOptions _serializerOptions;
 
-        public RestServiceManager()
+        public RequestProvider()
         {
             _serializerOptions = new JsonSerializerOptions
             {

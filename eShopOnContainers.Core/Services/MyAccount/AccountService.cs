@@ -6,24 +6,24 @@ namespace eShopOnContainers.Core.Services.MyAccount
 {
     public class AccountService : IAccountService
     {
-        private readonly RestServiceManager<List<AccountPageItem>> _restServiceAccountPageItemManager;
-        private readonly RestServiceManager<List<AccountPageItemLogined>> _restServiceAccountPageItemLoginedManager;
+        private readonly RequestProvider<List<AccountPageItem>> _restServiceAccountPageItemManager;
+        private readonly RequestProvider<List<AccountPageItemLogined>> _restServiceAccountPageItemLoginedManager;
         public AccountService()
         {
-            _restServiceAccountPageItemLoginedManager = new RestServiceManager<List<AccountPageItemLogined>>();
-            _restServiceAccountPageItemManager = new RestServiceManager<List<AccountPageItem>>();
+            _restServiceAccountPageItemLoginedManager = new RequestProvider<List<AccountPageItemLogined>>();
+            _restServiceAccountPageItemManager = new RequestProvider<List<AccountPageItem>>();
         }
         public List<AccountPageItem> GetAccountPageItems()
         {
 
-            return _restServiceAccountPageItemManager.GetServiceResponse(ServiceUrlConst.AccountPageItem);
+            return _restServiceAccountPageItemManager.GetServiceResponse(MyGlobalSettings.AccountPageItem);
 
         }
 
         public List<AccountPageItemLogined> GetAccountPageItemsLogined()
         {
 
-            return _restServiceAccountPageItemLoginedManager.GetServiceResponse(ServiceUrlConst.AccountPageItemLogined);
+            return _restServiceAccountPageItemLoginedManager.GetServiceResponse(MyGlobalSettings.AccountPageItemLogined);
         }
     }
 }

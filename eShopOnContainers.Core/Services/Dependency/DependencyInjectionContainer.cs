@@ -14,8 +14,7 @@ namespace eShopOnContainers.Core.Services.Dependency
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IHomeService, HomeService>();
             services.AddScoped<ICategoryService, CategoryService>();
-            services.AddScoped<IProductServices, ProductService>();
-
+            services.AddScoped<IProductService, ProductService>();
             return services;
         }
 
@@ -25,8 +24,6 @@ namespace eShopOnContainers.Core.Services.Dependency
             services.AddTransient<Category>();
             services.AddTransient<Account>();
             services.AddTransient<Product>();
-
-
             return services;
         }
     }

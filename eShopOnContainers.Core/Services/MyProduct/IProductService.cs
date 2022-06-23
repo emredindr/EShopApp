@@ -5,6 +5,8 @@ namespace eShopOnContainers.Core.Services.MyProduct
 {
     public interface IProductService
     {
-        List<Product> GetAllProduct();
+        List<Product> GetProducts();
+        List<Product> GetProducts(ProductFilter productFilter);
+        Product GetProductById(int productId);
     }
 }

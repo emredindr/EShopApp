@@ -2,7 +2,7 @@
 
 namespace eShopOnContainers.Core.Views
 {
-    public partial class BasketView : ContentPageBase
+    public partial class BasketView
     {
         public BasketView()
         {

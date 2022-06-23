@@ -4,11 +4,11 @@ using eShopOnContainers.Core.Services.MyHome;
 
 namespace eShopOnContainers.Core.MyViewModels
 {
-    public class Home
+    public class HomeViewModel
     {
         public List<Banner> Banners { get; set; }
 
-        public Home(IHomeService homeService)
+        public HomeViewModel(IHomeService homeService)
         {
             Banners = homeService.GetBanners();
         }

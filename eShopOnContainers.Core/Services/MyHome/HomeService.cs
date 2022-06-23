@@ -6,14 +6,14 @@ namespace eShopOnContainers.Core.Services.MyHome
 {
     public class HomeService : IHomeService
     {
-        private readonly RestServiceManager<List<Banner>> _restServiceBannerManager;
+        private readonly RequestProvider<List<Banner>> _restServiceBannerManager;
         public HomeService()
         {
-            _restServiceBannerManager = new RestServiceManager<List<Banner>>();
+            _restServiceBannerManager = new RequestProvider<List<Banner>>();
         }
         public List<Banner> GetBanners()
         {
-            return _restServiceBannerManager.GetServiceResponse(ServiceUrlConst.Banner);
+            return _restServiceBannerManager.GetServiceResponse(MyGlobalSettings.Banner);
         }
     }
 }
