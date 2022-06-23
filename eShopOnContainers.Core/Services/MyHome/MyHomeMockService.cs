@@ -44,11 +44,11 @@ namespace eShopOnContainers.Core.Services.MyHome
                 },
                 new Banner()
                 {
-                    Image = "firsaturunu10.png"
+                    Image = "firsaturunu9.png"
                 },
                 new Banner()
                 {
-                    Image = "firsaturunu11.png"
+                    Image = "firsaturunu10.png"
                 }
         };
 
