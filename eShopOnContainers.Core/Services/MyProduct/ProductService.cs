@@ -5,21 +5,21 @@ using eShopOnContainers.Core.Services.MyRestService;
 
 namespace eShopOnContainers.Core.Services.MyProduct
 {
-    public class ProductService : IProductServices
+    public class ProductService : IProductService
     {
-        private readonly RestServiceManager<List<Product>> _restServiceProductManager;
+        private readonly RequestProvider<List<Product>> _restServiceProductManager;
         public ProductService()
         {
-            _restServiceProductManager = new RestServiceManager<List<Product>>();
+            _restServiceProductManager = new RequestProvider<List<Product>>();
         }
         public List<Product> GetProducts()
         {
-            return _restServiceProductManager.GetServiceResponse(ServiceUrlConst.Product);
+            return _restServiceProductManager.GetServiceResponse(MyGlobalSettings.Product);
         }
 
         public List<Product> GetProducts(ProductFilter productFilter)
         {
-            var allProduct = _restServiceProductManager.GetServiceResponse(ServiceUrlConst.Product);
+            var allProduct = _restServiceProductManager.GetServiceResponse(MyGlobalSettings.Product);
 
             if (productFilter.MainCategoryId.HasValue)
                 allProduct = allProduct.Where(x => x.CategoryId == productFilter.MainCategoryId.Value).ToList();
@@ -37,7 +37,7 @@ namespace eShopOnContainers.Core.Services.MyProduct
 
         public Product GetProductById(int productId)
         {
-            var allProduct = _restServiceProductManager.GetServiceResponse(ServiceUrlConst.Product);
+            var allProduct = _restServiceProductManager.GetServiceResponse(MyGlobalSettings.Product);
             var result = allProduct.FirstOrDefault(x => x.Id == productId);
             return result;
         }
